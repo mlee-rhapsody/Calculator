@@ -47,7 +47,8 @@
     }else if([@"*" isEqualToString:operation]){
         result = [self popOperand] * [self popOperand];
     }else if([@"/" isEqualToString:operation]){
-        result = [self popOperand] / [self popOperand];
+        NSLog(@"%g", [self.operandStack lastObject]);
+        result = 1/([self popOperand] / [self popOperand]);
     }else if([@"-" isEqualToString:operation]){
         result = [self popOperand] - [self popOperand];
     }
