@@ -18,6 +18,7 @@
 
 @implementation CalculatorViewController
 @synthesize display = _display;
+@synthesize tickerDisplay = _tickerDisplay;
 @synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
 @synthesize userHasPressedDecimal = _userHasPressedDecimal;
 @synthesize brain = _brain;
@@ -46,7 +47,7 @@
 {
 
     [self.brain pushOperand:[self.display.text doubleValue]];
-//    self.display.text = @"0";
+    self.tickerDisplay.text = [[self.tickerDisplay.text stringByAppendingString:self.display.text] stringByAppendingString:@" "];
     self.userIsInTheMiddleOfEnteringANumber = NO;
     self.userHasPressedDecimal = NO;
  }
@@ -59,6 +60,8 @@
     double result = [self.brain performOperation:sender.currentTitle];
     NSString *resultString = [NSString stringWithFormat:@"%g", result];
     self.display.text = resultString;
+    
+    self.tickerDisplay.text = [[self.tickerDisplay.text stringByAppendingString: sender.currentTitle] stringByAppendingString:@" "];
 }
 - (IBAction)decimalPressed 
 {
@@ -66,5 +69,9 @@
         self.display.text = [self.display.text stringByAppendingString:@"."];
         self.userHasPressedDecimal = YES;
     }
+}
+- (void)viewDidUnload {
+    [self setTickerDisplay:nil];
+    [super viewDidUnload];
 }
 @end
