@@ -70,6 +70,16 @@
         self.userHasPressedDecimal = YES;
     }
 }
+
+- (IBAction)clearPressed 
+{
+    self.display.text = @"0";
+    self.tickerDisplay.text = @"";
+    self.userIsInTheMiddleOfEnteringANumber = NO;
+    self.userHasPressedDecimal = NO;
+    
+    
+}
 - (void)viewDidUnload {
     [self setTickerDisplay:nil];
     [super viewDidUnload];

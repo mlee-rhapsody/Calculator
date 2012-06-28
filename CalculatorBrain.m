@@ -16,6 +16,11 @@
 @implementation CalculatorBrain
 @synthesize operandStack = _operandStack;
 
+- (void)clearAll
+{
+    [_operandStack removeAllObjects];
+}
+
 - (NSMutableArray *) operandStack{
     if(_operandStack == nil){
         _operandStack = [[NSMutableArray alloc] init];
@@ -35,7 +40,6 @@
     if(operandObject){
         [self.operandStack removeLastObject];
     }
-    
     return [operandObject doubleValue];
 }
 
@@ -48,8 +52,7 @@
     }else if([@"*" isEqualToString:operation]){
         result = [self popOperand] * [self popOperand];
     }else if([@"/" isEqualToString:operation]){
-        NSLog(@"%g", [self.operandStack lastObject]);
-        result = 1/([self popOperand] / [self popOperand]);
+         result = 1/([self popOperand] / [self popOperand]);
     }else if([@"-" isEqualToString:operation]){
         result = [self popOperand] - [self popOperand];
     }else if([@"sin" isEqualToString:operation]){
