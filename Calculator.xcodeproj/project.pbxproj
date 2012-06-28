@@ -15,6 +15,7 @@
 		7F0A9B3F159B628900A25BCE /* CalculatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9B3E159B628900A25BCE /* CalculatorAppDelegate.m */; };
 		7F0A9B42159B628900A25BCE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0A9B40159B628900A25BCE /* MainStoryboard.storyboard */; };
 		7F0A9B45159B628900A25BCE /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9B44159B628900A25BCE /* CalculatorViewController.m */; };
+		7F70D129159C07F500F2D676 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F70D128159C07F500F2D676 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		7F0A9B41159B628900A25BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7F0A9B43159B628900A25BCE /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		7F0A9B44159B628900A25BCE /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		7F70D127159C07F500F2D676 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		7F70D128159C07F500F2D676 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 		7F0A9B1F159B628900A25BCE = {
 			isa = PBXGroup;
 			children = (
+				7F70D127159C07F500F2D676 /* CalculatorBrain.h */,
+				7F70D128159C07F500F2D676 /* CalculatorBrain.m */,
 				7F0A9B34159B628900A25BCE /* Calculator */,
 				7F0A9B2D159B628900A25BCE /* Frameworks */,
 				7F0A9B2B159B628900A25BCE /* Products */,
@@ -164,6 +169,7 @@
 				7F0A9B3B159B628900A25BCE /* main.m in Sources */,
 				7F0A9B3F159B628900A25BCE /* CalculatorAppDelegate.m in Sources */,
 				7F0A9B45159B628900A25BCE /* CalculatorViewController.m in Sources */,
+				7F70D129159C07F500F2D676 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +281,7 @@
 				7F0A9B4A159B628900A25BCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
