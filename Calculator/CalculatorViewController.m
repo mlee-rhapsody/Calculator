@@ -58,7 +58,7 @@
         [self enterPressed];
     }
     double result = [self.brain performOperation:sender.currentTitle];
-    NSString *resultString = [NSString stringWithFormat:@"%g", result];
+    NSString *resultString = [NSString stringWithFormat:@"%g =", result];
     self.display.text = resultString;
     
     self.tickerDisplay.text = [[self.tickerDisplay.text stringByAppendingString: sender.currentTitle] stringByAppendingString:@" "];
@@ -81,7 +81,6 @@
     
 }
 - (IBAction)backspacePressed {
-    NSLog(@"Length of text is %d", self.display.text.length);
     if(self.display.text.length<=1) {
         self.display.text = @"0";
     }else{
