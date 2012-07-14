@@ -80,6 +80,14 @@
     
     
 }
+- (IBAction)backspacePressed {
+    NSLog(@"Length of text is %d", self.display.text.length);
+    if(self.display.text.length<=1) {
+        self.display.text = @"0";
+    }else{
+        self.display.text = [self.display.text substringToIndex:self.display.text.length-1];
+    }
+}
 - (void)viewDidUnload {
     [self setTickerDisplay:nil];
     [super viewDidUnload];
